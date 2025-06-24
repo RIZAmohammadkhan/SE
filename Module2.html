@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineering Module 2 - Study Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Software Engineering Module 2</h1>
+            <p>Complete Study Guide - Requirement Engineering, Software Design & Object Modeling</p>
+        </div>
+        
+        <div class="nav">
+            <a href="Module1.html">Module 1</a>
+            <a href="Module2.html" class="active-module">Module 2</a>
+            <a href="Module3.html">Module 3</a>
+            <a href="Module4.html">Module 4</a>
+        </div>
+
+        <!-- Requirement Engineering Section -->
+        <div class="section" id="req-eng">
+            <h2>1. Requirement Engineering</h2>
+            
+            <div class="subsection">
+                <h3>1.1 Feasibility Study</h3>
+                <p>A feasibility study determines whether a proposed system is viable and worth developing.</p>
+                
+                <div class="key-points">
+                    <strong>Types of Feasibility:</strong>
+                    <ul>
+                        <li><strong>Technical Feasibility:</strong> Can the system be built with current technology?</li>
+                        <li><strong>Economic Feasibility:</strong> Is the project cost-effective?</li>
+                        <li><strong>Operational Feasibility:</strong> Will the system work in the current environment?</li>
+                        <li><strong>Schedule Feasibility:</strong> Can the project be completed on time?</li>
+                    </ul>
+                </div>
+                
+                <div class="diagram">
+                    <h4>Feasibility Study Process</h4>
+                    <div class="flow-chart">
+                        <div class="flow-box">Problem Identification</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">Preliminary Investigation</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">Feasibility Analysis</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">Feasibility Report</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">Go/No-Go Decision</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>1.2 Functional and Non-Functional Requirements</h3>
+                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Functional Requirements</th>
+                            <th>Non-Functional Requirements</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>What the system should do</td>
+                            <td>How the system should perform</td>
+                        </tr>
+                        <tr>
+                            <td>User authentication, data processing</td>
+                            <td>Performance, security, usability</td>
+                        </tr>
+                        <tr>
+                            <td>Business logic, user interactions</td>
+                            <td>Reliability, scalability, maintainability</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="highlight">
+                    <strong>Example:</strong><br>
+                    <strong>Functional:</strong> "The system shall allow users to log in with username and password"<br>
+                    <strong>Non-Functional:</strong> "The system shall respond to login requests within 2 seconds"
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>1.3 Requirement Gathering</h3>
+                <div class="key-points">
+                    <strong>Techniques:</strong>
+                    <ul>
+                        <li><strong>Interviews:</strong> One-on-one discussions with stakeholders</li>
+                        <li><strong>Questionnaires:</strong> Written surveys for large groups</li>
+                        <li><strong>Observation:</strong> Watching users perform tasks</li>
+                        <li><strong>Document Analysis:</strong> Reviewing existing documentation</li>
+                        <li><strong>Prototyping:</strong> Building mockups for feedback</li>
+                        <li><strong>Brainstorming:</strong> Group idea generation sessions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>1.4 Requirement Analysis and Specification</h3>
+                <p>Process of examining, documenting, and validating requirements.</p>
+                
+                <div class="diagram">
+                    <h4>Requirement Analysis Process</h4>
+                    <pre>
+Raw Requirements → Analysis → Modeling → Validation → Specification Document
+                      ↓
+                 Prioritization
+                      ↓
+                 Conflict Resolution
+                      ↓
+                 Feasibility Check
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Software Design Section -->
+        <div class="section" id="software-design">
+            <h2>2. Software Design</h2>
+            
+            <div class="subsection">
+                <h3>2.1 Issues in Software Design</h3>
+                <div class="key-points">
+                    <strong>Common Design Issues:</strong>
+                    <ul>
+                        <li><strong>Complexity:</strong> Managing system complexity as it grows</li>
+                        <li><strong>Maintainability:</strong> Ensuring code can be easily modified</li>
+                        <li><strong>Scalability:</strong> Designing for future growth</li>
+                        <li><strong>Reusability:</strong> Creating components that can be reused</li>
+                        <li><strong>Performance:</strong> Balancing functionality with speed</li>
+                        <li><strong>Security:</strong> Protecting against vulnerabilities</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>2.2 Modularity</h3>
+                <p>Breaking down a system into smaller, manageable components.</p>
+                
+                <div class="highlight">
+                    <strong>Benefits of Modularity:</strong><br>
+                    • Easier to understand and maintain<br>
+                    • Parallel development possible<br>
+                    • Code reusability<br>
+                    • Easier testing and debugging
+                </div>
+                
+                <div class="diagram">
+                    <h4>Modular System Structure</h4>
+                    <pre>
+                    Main System
+                         |
+            ┌─────────────┼─────────────┐
+            |             |             |
+        Module A      Module B      Module C
+            |             |             |
+        ┌───┼───┐    ┌───┼───┐    ┌───┼───┐
+       A1  A2  A3   B1  B2  B3   C1  C2  C3
+                    </pre>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>2.3 Coupling & Cohesion</h3>
+                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Coupling (Low is Better)</th>
+                            <th>Cohesion (High is Better)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Degree of interdependence between modules</td>
+                            <td>Degree of interaction within a module</td>
+                        </tr>
+                        <tr>
+                            <td>Data, Control, Common, Content</td>
+                            <td>Functional, Sequential, Communicational</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="code-block">
+<pre><code>// Example of Low Coupling, High Cohesion
+class Calculator {
+    // High cohesion - all methods related to calculation
+    public int add(int a, int b) { return a + b; }
+    public int subtract(int a, int b) { return a - b; }
+    public int multiply(int a, int b) { return a * b; }
+}
+
+class Display {
+    // Low coupling - minimal dependency on Calculator
+    public void showResult(int result) {
+        System.out.println("Result: " + result);
+    }
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>2.4 Data Flow Diagrams (DFD)</h3>
+                <p>Visual representation of how data flows through a system.</p>
+                
+                <div class="key-points">
+                    <strong>DFD Components:</strong>
+                    <ul>
+                        <li><strong>External Entity:</strong> Rectangle - data source/destination</li>
+                        <li><strong>Process:</strong> Circle - transforms data</li>
+                        <li><strong>Data Store:</strong> Open rectangle - stores data</li>
+                        <li><strong>Data Flow:</strong> Arrow - shows data movement</li>
+                    </ul>
+                </div>
+                
+                <div class="diagram">
+                    <h4>Sample DFD - Library System (Textual)</h4>
+                    <pre>
+[Student] ──book request──→ (1.0 Check Availability) ──query──→ [Book Database]
+    ↑                              |                                    |
+    |                              |                                    |
+book status                   book details                        book info
+    ←──────────────────────────────┴────────────────────────────────────┘
+                    </pre>
+                </div>
+
+                <div class="diagram">
+                    <h4>Sample DFD (Visual) </h4>
+                    <img src="dfd.png" alt="Data Flow Diagram Example" style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>2.5 Function Oriented Design</h3>
+                <p>Design approach that focuses on functions and their interactions.</p>
+                
+                <div class="highlight">
+                    <strong>Characteristics:</strong><br>
+                    • Top-down approach<br>
+                    • Emphasis on functions over data<br>
+                    • Hierarchical decomposition<br>
+                    • Used in structured programming
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>2.6 Software Metrics and SCM</h3>
+                
+                <div class="key-points">
+                    <strong>Software Metrics:</strong>
+                    <ul>
+                        <li><strong>Size Metrics:</strong> Lines of Code (LOC), Function Points</li>
+                        <li><strong>Complexity Metrics:</strong> Cyclomatic Complexity</li>
+                        <li><strong>Quality Metrics:</strong> Defect Density, Reliability</li>
+                        <li><strong>Productivity Metrics:</strong> Development time, Cost</li>
+                    </ul>
+                </div>
+                
+                <div class="key-points">
+                    <strong>Software Configuration Management (SCM):</strong>
+                    <ul>
+                        <li>Version Control (Git, SVN)</li>
+                        <li>Change Management</li>
+                        <li>Build Management</li>
+                        <li>Release Management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Newly Added Sections Start Here -->
+            <div class="subsection">
+                <h3>2.7 Function Point Analysis (FPA)</h3>
+                <p>Function Point Analysis is a standardized method to measure the size and complexity of software based on its functionality.</p>
+                
+                <h4>Components:</h4>
+                <div class="key-points">
+                    <ul>
+                        <li><strong>External Inputs (EI):</strong> User inputs (e.g., forms).</li>
+                        <li><strong>External Outputs (EO):</strong> Outputs to users (e.g., reports).</li>
+                        <li><strong>External Inquiries (EQ):</strong> Input-output pairs with no update (e.g., search).</li>
+                        <li><strong>Internal Logical Files (ILF):</strong> Internal data (e.g., customer database).</li>
+                        <li><strong>External Interface Files (EIF):</strong> External data (e.g., imported Excel).</li>
+                    </ul>
+                </div>
+                <p>Each component is weighted (Low, Avg, High) and added to compute <strong>Unadjusted Function Points (UFP)</strong>.</p>
+
+                <h4>Example:</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Count</th>
+                            <th>Weight</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>EI</td>
+                            <td>5</td>
+                            <td>3</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>EO</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>EQ</td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>ILF</td>
+                            <td>2</td>
+                            <td>7</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>EIF</td>
+                            <td>1</td>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total UFP</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong>58</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p>Adjust using <strong>Complexity Adjustment Factor (CAF)</strong>:</p>
+                <div class="code-block">
+                    <pre>FP = UFP × (0.65 + 0.01 × CAF)</pre>
+                </div>
+                <p>If CAF = 10,</p>
+                <div class="code-block">
+                    <pre>FP = 58 × (0.65 + 0.01 × 10) = 58 × 0.75 = 43.5</pre>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>2.8 COCOMO (Constructive Cost Model)</h3>
+                <p>COCOMO estimates effort (in person-months) and time for software development based on project size (in KLOC).</p>
+
+                <h4>Basic COCOMO Formula:</h4>
+                <div class="code-block">
+                    <pre>
+Effort = a ⋅ (KLOC)<sup>b</sup>
+Time = c ⋅ (Effort)<sup>d</sup></pre>
+                </div>
+
+                <h4>Modes:</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Mode</th>
+                            <th>Description</th>
+                            <th>a</th>
+                            <th>b</th>
+                            <th>c</th>
+                            <th>d</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Organic</td>
+                            <td>Small, in-house, experienced team</td>
+                            <td>2.4</td>
+                            <td>1.05</td>
+                            <td>2.5</td>
+                            <td>0.38</td>
+                        </tr>
+                        <tr>
+                            <td>Semi-Detached</td>
+                            <td>Intermediate projects</td>
+                            <td>3.0</td>
+                            <td>1.12</td>
+                            <td>2.5</td>
+                            <td>0.35</td>
+                        </tr>
+                        <tr>
+                            <td>Embedded</td>
+                            <td>Complex, constrained</td>
+                            <td>3.6</td>
+                            <td>1.20</td>
+                            <td>2.5</td>
+                            <td>0.32</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>Example (Organic Project, 32 KLOC):</h4>
+                <div class="code-block">
+                    <pre>
+Effort = 2.4 × (32)<sup>1.05</sup> ≈ 91.6 person-months
+Time = 2.5 × (91.6)<sup>0.38</sup> ≈ 18.3 months</pre>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>2.9 LOC (Lines of Code)</h3>
+                <p>LOC is the simplest metric for measuring the size of a program by counting the number of lines in source code.</p>
+
+                <h4>Types:</h4>
+                <div class="key-points">
+                    <ul>
+                        <li><strong>Physical LOC:</strong> All lines including comments and whitespace.</li>
+                        <li><strong>Logical LOC:</strong> Actual executable statements.</li>
+                    </ul>
+                </div>
+
+                <h4>Example:</h4>
+                <div class="code-block">
+<pre><code>// Compute sum
+int sum = 0;  // Initialize
+for (int i = 0; i < 10; i++) {
+    sum += i;
+}</code></pre>
+                </div>
+                <p>
+                    Physical LOC = 5<br>
+                    Logical LOC = 3 (declaration, loop, increment)
+                </p>
+            </div>
+
+            <div class="subsection">
+                <h3>2.10 Cyclomatic Complexity</h3>
+                <p>Cyclomatic Complexity (by McCabe) measures the number of linearly independent paths in code, indicating test case minimums and code complexity.</p>
+
+                <h4>Formula:</h4>
+                <div class="code-block">
+                    <pre>V(G) = E - N + 2P</pre>
+                </div>
+                <div class="key-points">
+                    <ul>
+                        <li><strong>E:</strong> Number of edges</li>
+                        <li><strong>N:</strong> Number of nodes</li>
+                        <li><strong>P:</strong> Number of connected components (usually 1)</li>
+                    </ul>
+                </div>
+                <p>OR</p>
+                <p>For programs composed of sequential decision statements (like <code>if</code>, <code>while</code>, <code>for</code>), the cyclomatic complexity V(G) can often be determined by counting the number of decision points (D) and adding 1. This is because each decision point typically adds one node and two edges, increasing the complexity by one.</p>
+                <div class="code-block">
+                    <pre>V(G) = D + 1</pre>
+                </div>
+                
+                <h4>Example:</h4>
+                <div class="code-block">
+<pre><code>void process(int x) {
+    if (x > 0) {
+        x++;
+    } else {
+        x--;
+    }
+    if (x % 2 == 0) {
+        System.out.println("Even");
+    }
+}</code></pre>
+                </div>
+                <p>
+                    2 decision points (2 <code>if</code>)<br>
+                    V(G) = 2 + 1 = 3
+                </p>
+                <p>→ <strong>3 test cases</strong> needed for full branch coverage.</p>
+            </div>
+            <!-- Newly Added Sections End Here -->
+
+        </div>
+
+        <!-- Object Modeling Section -->
+        <div class="section" id="object-modeling">
+            <h2>3. Object Modeling</h2>
+            
+            <div class="subsection">
+                <h3>3.1 User Interface Design</h3>
+                <div class="key-points">
+                    <strong>UI Design Principles:</strong>
+                    <ul>
+                        <li><strong>Consistency:</strong> Uniform look and behavior</li>
+                        <li><strong>Simplicity:</strong> Easy to understand and use</li>
+                        <li><strong>Feedback:</strong> System responds to user actions</li>
+                        <li><strong>Accessibility:</strong> Usable by people with disabilities</li>
+                        <li><strong>Efficiency:</strong> Minimize user effort</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>3.2 Unified Process</h3>
+                <p>Iterative and incremental software development framework.</p>
+                
+                <div class="diagram">
+                    <h4>Unified Process Phases</h4>
+                    <div class="flow-chart">
+                        <div class="flow-box">Inception</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">Elaboration</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">Construction</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">Transition</div>
+                    </div>
+                </div>
+                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>Goal</th>
+                            <th>Key Activities</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Inception</td>
+                            <td>Define project scope</td>
+                            <td>Requirements gathering, feasibility</td>
+                        </tr>
+                        <tr>
+                            <td>Elaboration</td>
+                            <td>Analyze requirements</td>
+                            <td>Architecture design, risk analysis</td>
+                        </tr>
+                        <tr>
+                            <td>Construction</td>
+                            <td>Build the system</td>
+                            <td>Coding, testing, integration</td>
+                        </tr>
+                        <tr>
+                            <td>Transition</td>
+                            <td>Deploy to users</td>
+                            <td>Beta testing, deployment, training</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="subsection">
+                <h3>3.3 Object Modeling using UML</h3>
+                <p>UML (Unified Modeling Language) is a standard notation for modeling software systems.</p>
+                
+                <div class="highlight">
+                    <strong>UML Benefits:</strong><br>
+                    • Standardized notation<br>
+                    • Visual representation<br>
+                    • Supports different views<br>
+                    • Tool support available
+                </div>
+            </div>
+        </div>
+
+        <!-- UML Diagrams Section -->
+        <div class="section" id="uml-diagrams">
+            <h2>4. UML Diagrams</h2>
+            
+            <div class="subsection">
+                <h3>4.1 Use Case Diagram</h3>
+                <p>Shows interactions between users (actors) and system functions (use cases).</p>
+                
+                <div class="diagram">
+                    <h4>Library Management System - Use Case (Textual)</h4>
+                    <pre>
+                    ┌─────────────────────────────────────────┐
+                    │        Library Management System        │
+                    │                                         │
+                    │  ┌─────────────┐  ┌─────────────────┐  │
+Student ──────────── │  Borrow Book  │  │   Return Book   │  │
+                    │  └─────────────┘  └─────────────────┘  │
+                    │                                         │
+                    │  ┌─────────────┐  ┌─────────────────┐  │
+Librarian ────────── │  Add Book     │  │   Remove Book   │  │
+                    │  └─────────────┘  └─────────────────┘  │
+                    └─────────────────────────────────────────┘
+                    </pre>
+                </div>
+
+                <div class="diagram">
+                    <h4>Use Case Diagram (Visual)</h4>
+                    <img src="uml.png" alt="Use Case Diagram Example" style="max-width: 100%; height: auto;">
+                </div>
+                
+                <div class="key-points">
+                    <strong>Components:</strong>
+                    <ul>
+                        <li><strong>Actor:</strong> External entity that interacts with system</li>
+                        <li><strong>Use Case:</strong> Specific functionality provided by system</li>
+                        <li><strong>System Boundary:</strong> Rectangle defining system scope</li>
+                        <li><strong>Relationships:</strong> Association, Include, Extend</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>4.2 Sequence Diagram</h3>
+                <p>Shows interactions between objects over time.</p>
+                
+                <div class="diagram">
+                    <h4>Login Process - Sequence Diagram</h4>
+                    <pre>
+User        LoginForm      Database       Session
+ |             |             |             |
+ |─enter_creds→|             |             |
+ |             |─validate───→|             |
+ |             |←───result────|             |
+ |             |─create_session────────────→|
+ |             |←───session_id──────────────|
+ |←success_msg─|             |             |
+ |             |             |             |
+                    </pre>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>4.3 Communication (Collaboration) Diagram</h3>
+                <p>Shows interactions between objects with emphasis on relationships.</p>
+                
+                <div class="diagram">
+                    <h4>ATM Withdrawal - Communication Diagram (Textual)</h4>
+                    <pre>
+                    ATM ──1: insert_card──→ CardReader
+                     │                         │
+                     │                         │
+                     │←──2: card_data──────────┘
+                     │
+                     │──3: validate──→ Bank
+                     │                  │
+                     │←─4: approved─────┘
+                     │
+                     │──5: dispense──→ CashDispenser
+                    </pre>
+                </div>
+                <div class="diagram">
+                    <h4>Communication Diagram (Visual)</h4>
+                    <img src="coll_uml.png" alt="Communication Diagram Example" style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>4.4 Activity Diagram</h3>
+                <p>Shows workflow and business processes.</p>
+                
+                <div class="diagram">
+                    <h4>Order Processing - Activity Diagram</h4>
+                    <pre>
+                    ● Start
+                    ↓
+                ┌─────────────┐
+                │ Receive Order│
+                └─────────────┘
+                    ↓
+                ┌─────────────┐
+                │Check Stock  │
+                └─────────────┘
+                    ↓
+                 ◊ In Stock?
+                ↙         ↘
+            [Yes]           [No]
+                ↓             ↓
+        ┌─────────────┐  ┌─────────────┐
+        │Process Order│  │  Backorder  │
+        └─────────────┘  └─────────────┘
+                ↓             ↓
+                ┌─────────────┐
+                │Ship Product │
+                └─────────────┘
+                    ↓
+                    ● End
+                    </pre>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>4.5 State Chart Diagram</h3>
+                <p>Shows states of an object and transitions between states.</p>
+                
+                <div class="diagram">
+                    <h4>Phone Call - State Chart</h4>
+                    <pre>
+                    ● ──→ [Idle]
+                           │
+                      dial number
+                           ↓
+                       [Dialing] ──busy──→ [Busy]
+                           │                 │
+                      connected         hang up
+                           ↓                 ↓
+                      [Connected] ──hang up──→ [Idle]
+                           │
+                      disconnected
+                           ↓
+                        [Idle]
+                    </pre>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>4.6 Structural UML Diagrams</h3>
+                
+                <h4>Class Diagram</h4>
+                <p>Shows classes, attributes, methods, and relationships.</p>
+                
+                <div class="diagram">
+                    <h4>Class Diagram Example</h4>
+                    <pre>
+        ┌─────────────────────────┐
+        │        Student          │
+        ├─────────────────────────┤
+        │ - studentId: int        │
+        │ - name: String          │
+        │ - email: String         │
+        ├─────────────────────────┤
+        │ + enrollCourse()        │
+        │ + dropCourse()          │
+        │ + getGrades()           │
+        └─────────────────────────┘
+                    │
+                    │ enrolls in
+                    ↓
+        ┌─────────────────────────┐
+        │        Course           │
+        ├─────────────────────────┤
+        │ - courseId: int         │
+        │ - title: String         │
+        │ - credits: int          │
+        ├─────────────────────────┤
+        │ + addStudent()          │
+        │ + removeStudent()       │
+        │ + getStudents()         │
+        └─────────────────────────┘
+                    </pre>
+                </div>
+                
+                <h4>Object Diagram</h4>
+                <p>Shows instances of classes at a specific point in time.</p>
+                
+                <div class="diagram">
+                    <h4>Object Diagram Example</h4>
+                    <pre>
+        ┌─────────────────────────┐
+        │    john: Student        │
+        ├─────────────────────────┤
+        │ studentId = 12345       │
+        │ name = "John Doe"       │
+        │ email = "john@email.com"│
+        └─────────────────────────┘
+                    │
+                    │ enrolled in
+                    ↓
+        ┌─────────────────────────┐
+        │    cs101: Course        │
+        ├─────────────────────────┤
+        │ courseId = 101          │
+        │ title = "Programming"   │
+        │ credits = 3             │
+        └─────────────────────────┘
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coding Standards Section -->
+        <div class="section" id="coding-standards">
+            <h2>5. Coding Standards and Code Review</h2>
+            
+            <div class="subsection">
+                <h3>5.1 Coding Standards</h3>
+                <p>Guidelines for writing clean, maintainable, and consistent code.</p>
+                
+                <div class="key-points">
+                    <strong>Naming Conventions:</strong>
+                    <ul>
+                        <li><strong>Classes:</strong> PascalCase (e.g., StudentRecord)</li>
+                        <li><strong>Methods:</strong> camelCase (e.g., calculateGrade)</li>
+                        <li><strong>Variables:</strong> camelCase (e.g., firstName)</li>
+                        <li><strong>Constants:</strong> UPPER_CASE (e.g., MAX_SIZE)</li>
+                    </ul>
+                </div>
+                
+                <div class="code-block">
+<pre><code>// Good Coding Standards Example
+public class StudentManager {
+    private static final int MAX_STUDENTS = 100;
+    private List<Student> studentList;
+    
+    public StudentManager() {
+        this.studentList = new ArrayList<>();
+    }
+    
+    /**
+     * Adds a new student to the system
+     * @param student The student to add
+     * @return true if successful, false otherwise
+     */
+    public boolean addStudent(Student student) {
+        if (student == null || studentList.size() >= MAX_STUDENTS) {
+            return false;
+        }
+        return studentList.add(student);
+    }
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>5.2 Code Review Techniques</h3>
+                
+                <div class="key-points">
+                    <strong>Types of Code Reviews:</strong>
+                    <ul>
+                        <li><strong>Formal Review:</strong> Structured process with defined roles</li>
+                        <li><strong>Walkthrough:</strong> Author explains code to reviewers</li>
+                        <li><strong>Inspection:</strong> Systematic examination using checklists</li>
+                        <li><strong>Pair Programming:</strong> Two programmers work together</li>
+                        <li><strong>Tool-assisted:</strong> Automated tools help with review</li>
+                    </ul>
+                </div>
+                
+                <div class="highlight">
+                    <strong>Code Review Checklist:</strong><br>
+                    ✓ Code follows coding standards<br>
+                    ✓ Logic is correct<br>
+                    ✓ Error handling is appropriate<br>
+                    ✓ Code is well-documented<br>
+                    ✓ No security vulnerabilities<br>
+                    ✓ Performance considerations<br>
+                    ✓ Test coverage is adequate
+                </div>
+                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Review Type</th>
+                            <th>Participants</th>
+                            <th>Duration</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Walkthrough</td>
+                            <td>2-7 people</td>
+                            <td>1-2 hours</td>
+                            <td>Understanding and finding defects</td>
+                        </tr>
+                        <tr>
+                            <td>Inspection</td>
+                            <td>3-6 people</td>
+                            <td>1-2 hours</td>
+                            <td>Finding defects systematically</td>
+                        </tr>
+                        <tr>
+                            <td>Pair Programming</td>
+                            <td>2 people</td>
+                            <td>Continuous</td>
+                            <td>Real-time quality assurance</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="subsection">
+                <h3>5.3 Best Practices</h3>
+                
+                <div class="key-points">
+                    <strong>Documentation Standards:</strong>
+                    <ul>
+                        <li><strong>Comments:</strong> Explain why, not what</li>
+                        <li><strong>Function Documentation:</strong> Purpose, parameters, return values</li>
+                        <li><strong>Class Documentation:</strong> Responsibility and usage</li>
+                        <li><strong>README Files:</strong> Setup and usage instructions</li>
+                    </ul>
+                </div>
+                
+                <div class="code-block">
+<pre><code>/**
+ * Calculates the final grade for a student based on various assessments
+ * Uses weighted average: 40% midterm, 40% final, 20% assignments
+ * 
+ * @param midtermScore Score from midterm exam (0-100)
+ * @param finalScore Score from final exam (0-100) 
+ * @param assignmentAvg Average of all assignments (0-100)
+ * @return Final grade as percentage (0-100)
+ * @throws IllegalArgumentException if any score is negative or > 100
+ */
+public double calculateFinalGrade(double midtermScore, double finalScore, double assignmentAvg) {
+    // Validate scores (implementation not shown for brevity)
+    // validateScore(midtermScore, "Midterm");
+    // validateScore(finalScore, "Final");
+    // validateScore(assignmentAvg, "Assignment");
+    
+    return (midtermScore * 0.4) + (finalScore * 0.4) + (assignmentAvg * 0.2);
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

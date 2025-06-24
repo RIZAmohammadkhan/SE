@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineering Module 1 - Study Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Software Engineering Module 1</h1>
+            <p>Complete Study Guide - Introduction to Software Engineering & SDLC</p>
+        </div>
+        
+        <div class="nav">
+            <a href="Module1.html" class="active-module">Module 1</a>
+            <a href="Module2.html">Module 2</a>
+            <a href="Module3.html">Module 3</a>
+            <a href="Module4.html">Module 4</a>
+        </div>
+
+        <!-- Introduction Section -->
+        <div class="section" id="intro">
+            <h2>1. Introduction to Software Engineering</h2>
+            
+            <div class="subsection">
+                <h3>1.1 What is Engineering?</h3>
+                <div class="key-points">
+                    <strong>Engineering Definition:</strong>
+                    <ul>
+                        <li>Applying scientific principles to design, build, and maintain systems</li>
+                        <li>Blend of creativity, rigorous analysis, and systematic thinking</li>
+                        <li>Goal: Solve real-world problems systematically</li>
+                        <li>Not just "building" - engineering a solution</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>1.2 Why Software Development ≠ Construction?</h3>
+                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Construction</th>
+                            <th>Software Development</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fixed blueprints</td>
+                            <td>Evolving requirements</td>
+                        </tr>
+                        <tr>
+                            <td>Physical, tangible materials</td>
+                            <td>Intangible, logic-driven</td>
+                        </tr>
+                        <tr>
+                            <td>Changes are costly after planning</td>
+                            <td>Highly flexible and modifiable</td>
+                        </tr>
+                        <tr>
+                            <td>Structural complexity</td>
+                            <td>Logic and interdependency complexity</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="highlight">
+                    <strong>Key Difference:</strong> Software development is more like "Engineering + Design + Creativity" with continuous refinement, not just following a static plan.
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>1.3 What is Software Engineering?</h3>
+                
+                <div class="highlight">
+                    <strong>Formal Definition:</strong><br>
+                    "The application of engineering principles to design, develop, test, and maintain software systems in a <strong>systematic</strong>, <strong>disciplined</strong>, and <strong>quantifiable</strong> way."
+                </div>
+                
+                <div class="key-points">
+                    <strong>Key Keywords:</strong>
+                    <ul>
+                        <li><strong>Systematic:</strong> Following organized methods and processes</li>
+                        <li><strong>Disciplined:</strong> Adhering to established practices and standards</li>
+                        <li><strong>Quantifiable:</strong> Measurable outcomes and metrics</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>1.4 Evolution of Software Engineering</h3>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1940s-1960s</div>
+                        <div>
+                            <strong>The Dawn:</strong> Code written by mathematicians/scientists. No formal process. More art than science.
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">1970s-1980s</div>
+                        <div>
+                            <strong>The "Software Crisis":</strong> Projects failing - over budget, behind schedule, unreliable. Led to emergence of Software Engineering.
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">Present Day</div>
+                        <div>
+                            <strong>Structured Era:</strong> Methodologies (Agile, DevOps), sophisticated tools, team collaboration, quality focus.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="key-points">
+                    <strong>Impact of Modern Software Engineering:</strong>
+                    <ul>
+                        <li><strong>Productivity:</strong> Delivering more, faster</li>
+                        <li><strong>Quality:</strong> More reliable and robust software</li>
+                        <li><strong>Cost Efficiency:</strong> Better resource management, less rework</li>
+                        <li><strong>Reliability:</strong> Software users can depend on</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SDLC Section -->
+        <div class="section" id="sdlc">
+            <h2>2. Software Development Life Cycle (SDLC)</h2>
+            
+            <div class="subsection">
+                <h3>2.1 What is SDLC?</h3>
+                <p>The Software Development Life Cycle (SDLC) is a structured process or framework used for planning, creating, testing, and deploying high-quality software.</p>
+                
+                <div class="highlight">
+                    <strong>Main Purpose:</strong> Break down complex software development into clear, manageable, and distinct phases for better project management, resource allocation, and quality control.
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>2.2 Phases of SDLC</h3>
+                
+                <div class="diagram">
+                    <h4>SDLC Phases Flow</h4>
+                    <div class="flow-chart">
+                        <div class="flow-box">1. Requirements Gathering</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">2. Design</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">3. Development</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">4. Testing</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">5. Deployment</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">6. Maintenance</div>
+                    </div>
+                </div>
+                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>Purpose</th>
+                            <th>Key Question</th>
+                            <th>Output</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Requirements</strong></td>
+                            <td>Understand what software should do</td>
+                            <td>"What problem are we solving?"</td>
+                            <td>SRS Document</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Design</strong></td>
+                            <td>Create blueprint for system</td>
+                            <td>"How will we build the solution?"</td>
+                            <td>Design Documents</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Development</strong></td>
+                            <td>Write actual code</td>
+                            <td>"Let's build it!"</td>
+                            <td>Working Software</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Testing</strong></td>
+                            <td>Verify software works correctly</td>
+                            <td>"Does it work correctly?"</td>
+                            <td>Test Reports</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Deployment</strong></td>
+                            <td>Release to users</td>
+                            <td>"How do we get it to users?"</td>
+                            <td>Live System</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Maintenance</strong></td>
+                            <td>Keep system running and evolving</td>
+                            <td>"How do we keep it running well?"</td>
+                            <td>Updates & Fixes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="subsection">
+                <h3>2.3 Types of Testing in SDLC</h3>
+                <div class="key-points">
+                    <strong>Testing Levels:</strong>
+                    <ul>
+                        <li><strong>Unit Testing:</strong> Testing individual components/modules</li>
+                        <li><strong>Integration Testing:</strong> Testing interaction between modules</li>
+                        <li><strong>System Testing:</strong> Testing complete system against requirements</li>
+                        <li><strong>Acceptance Testing:</strong> Users test to ensure it meets their needs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>2.4 Types of Maintenance</h3>
+                <div class="key-points">
+                    <strong>Maintenance Activities:</strong>
+                    <ul>
+                        <li><strong>Corrective:</strong> Fixing bugs discovered post-release</li>
+                        <li><strong>Adaptive:</strong> Modifying for new/changed environments</li>
+                        <li><strong>Perfective:</strong> Enhancing features based on feedback</li>
+                        <li><strong>Preventive:</strong> Making changes to prevent future problems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Software Development Models -->
+        <div class="section" id="models">
+            <h2>3. Software Development Models</h2>
+            <p>Different projects require different approaches. SDLC models provide these frameworks.</p>
+        
+            <!-- Waterfall Model -->
+            <div class="model-card" id="waterfall">
+                <div class="model-title">1. Waterfall Model</div>
+                <p><strong>The classic, linear approach</strong></p>
+                
+                <div class="diagram">
+                    <h4>Waterfall Flow</h4>
+                    <div class="flow-chart">
+                        <div class="flow-box">Requirements</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">Design</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">Implementation</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">Testing</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">Deployment</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">Maintenance</div>
+                    </div>
+                </div>
+                
+                <div class="key-points">
+                    <strong>Structure:</strong>
+                    <ul>
+                        <li>Linear, sequential flow like a waterfall</li>
+                        <li>Each phase must be fully completed before next begins</li>
+                        <li>Progress flows steadily downwards</li>
+                        <li>Strong emphasis on documentation</li>
+                    </ul>
+                </div>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>✅ Advantages</h4>
+                        <ul>
+                            <li>Simple, easy to understand and use</li>
+                            <li>Clear stages, deliverables, milestones</li>
+                            <li>Good for well-understood, fixed requirements</li>
+                            <li>Strong documentation emphasis</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>❌ Disadvantages</h4>
+                        <ul>
+                            <li>Highly inflexible - no room for changes</li>
+                            <li>Issues discovered late, expensive to fix</li>
+                            <li>Not suitable for complex, evolving projects</li>
+                            <li>Working software only available at end</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight">
+                    <strong>When to Use:</strong><br>
+                    • Clear, stable, well-documented requirements<br>
+                    • Short-term projects or small maintenance updates<br>
+                    • Well-understood technology stack
+                </div>
+            </div>
+
+            <!-- Iterative Model -->
+            <div class="model-card" id="iterative">
+                <div class="model-title">2. Iterative and Incremental Model</div>
+                <p><strong>Build a little, test it, get feedback, build some more</strong></p>
+                
+                <div class="diagram">
+                    <h4>Iterative Development Cycle</h4>
+                    <pre>
+Iteration 1: Plan → Design (Core) → Implement (Core) → Test → Deliverable 1
+                                    ↓
+Iteration 2: Plan (New) → Design (Add) → Implement (Add) → Test → Deliverable 2
+                                    ↓
+Iteration 3: Plan (More) → Design (Refine) → Implement → Test → Deliverable 3
+                    </pre>
+                </div>
+                
+                <div class="key-points">
+                    <strong>Structure:</strong>
+                    <ul>
+                        <li>Develops software in small, manageable increments</li>
+                        <li>Each increment has its own mini-cycle</li>
+                        <li>Each iteration builds upon the previous one</li>
+                        <li>Working software available early</li>
+                    </ul>
+                </div>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>✅ Advantages</h4>
+                        <ul>
+                            <li>Working software available early</li>
+                            <li>More flexible than Waterfall</li>
+                            <li>Continuous customer feedback</li>
+                            <li>Easier to test and debug increments</li>
+                            <li>Better risk management</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>❌ Disadvantages</h4>
+                        <ul>
+                            <li>Requires comprehensive planning</li>
+                            <li>More documentation if not managed well</li>
+                            <li>Poor initial design leads to technical debt</li>
+                            <li>Total cost/timeline unclear at start</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight">
+                    <strong>When to Use:</strong><br>
+                    • Medium to large projects with incremental features<br>
+                    • Evolving requirements expected<br>
+                    • Early user feedback crucial<br>
+                    • Need for early prototypes/proof-of-concept
+                </div>
+            </div>
+
+            <!-- V-Model -->
+            <div class="model-card" id="v-model">
+                <div class="model-title">3. V-Shaped Model (Verification & Validation)</div>
+                <p><strong>A more disciplined Waterfall with early test planning</strong></p>
+                
+                <div class="diagram">
+                    <h4>V-Model Structure</h4>
+                    <pre>
+Requirements Analysis  ←→  Acceptance Testing
+        ↓                        ↑
+System Design         ←→  System Testing  
+        ↓                        ↑
+High-Level Design     ←→  Integration Testing
+        ↓                        ↑
+Low-Level Design      ←→  Unit Testing
+        ↓                        ↑
+           Coding (Bottom of V)
+                    </pre>
+                </div>
+                
+                <div class="key-points">
+                    <strong>Structure:</strong>
+                    <ul>
+                        <li>Extension of Waterfall with parallel testing activities</li>
+                        <li>Forms V-shape: left side = development, right side = testing</li>
+                        <li>Each development stage has corresponding testing phase</li>
+                        <li>Strong emphasis on verification and validation</li>
+                    </ul>
+                </div>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>✅ Advantages</h4>
+                        <ul>
+                            <li>Strong emphasis on verification & validation</li>
+                            <li>Early planning for testing activities</li>
+                            <li>Clear deliverables and review processes</li>
+                            <li>Good for quality-critical projects</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>❌ Disadvantages</h4>
+                        <ul>
+                            <li>Still rigid and inflexible like Waterfall</li>
+                            <li>No early prototypes produced</li>
+                            <li>Late-found issues expensive to fix</li>
+                            <li>Changes in requirements costly</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight">
+                    <strong>When to Use:</strong><br>
+                    • High reliability requirements (medical, aviation, critical systems)<br>
+                    • Well-defined and stable requirements<br>
+                    • Extensive testing and quality assurance needed
+                </div>
+            </div>
+
+            <!-- RAD Model -->
+            <div class="model-card" id="rad">
+                <div class="model-title">4. RAD (Rapid Application Development)</div>
+                <p><strong>Focus on speed, prototypes, and user feedback</strong></p>
+                
+                <div class="diagram">
+                    <h4>RAD Phases</h4>
+                    <div class="flow-chart">
+                        <div class="flow-box">Requirements Planning</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">User Design (Iterative)</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">Construction</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">Cutover (Deployment)</div>
+                    </div>
+                </div>
+                
+                <div class="key-points">
+                    <strong>Structure:</strong>
+                    <ul>
+                        <li>Emphasizes rapid prototyping with minimal upfront planning</li>
+                        <li>Heavy user involvement throughout process</li>
+                        <li>Continuous feedback on prototypes</li>
+                        <li>Uses automated tools and reusable components</li>
+                    </ul>
+                </div>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>✅ Advantages</h4>
+                        <ul>
+                            <li>Fast development cycle</li>
+                            <li>Strong user involvement</li>
+                            <li>Quick feedback loops</li>
+                            <li>Early functionality demonstration</li>
+                            <li>Reduced development time</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>❌ Disadvantages</h4>
+                        <ul>
+                            <li>Not suitable for large, complex systems</li>
+                            <li>Requires highly skilled developers</li>
+                            <li>Needs committed users for feedback</li>
+                            <li>May compromise system architecture</li>
+                            <li>Hard to manage scope creep</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight">
+                    <strong>When to Use:</strong><br>
+                    • Projects needing quick delivery<br>
+                    • Small-to-medium systems with clear objectives<br>
+                    • Available users for feedback<br>
+                    • Need for rapid prototyping to validate concepts
+                </div>
+            </div>
+            
+            <!-- Prototype Model -->
+            <div class="model-card" id="prototype">
+                <div class="model-title">5. Prototyping Model</div>
+                <p><strong>Build a mock-up to clarify needs, then build the real thing</strong></p>
+                
+                <div class="diagram">
+                    <h4>Prototyping Cycle</h4>
+                    <pre>
+    Build Prototype → User Evaluation → Refine Requirements
+           ↑                                      ↓
+    (Potentially) New Prototype  ←─────────────────┘
+           ↓
+    Actual System Development
+                    </pre>
+                </div>
+                
+                <div class="key-points">
+                    <strong>Structure:</strong>
+                    <ul>
+                        <li>Create early, incomplete but functional version</li>
+                        <li>Show prototype to users to gather feedback</li>
+                        <li>Refine requirements based on feedback</li>
+                        <li>Cycle repeats until requirements are clear</li>
+                        <li>Develop actual system (often from scratch)</li>
+                    </ul>
+                </div>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>✅ Advantages</h4>
+                        <ul>
+                            <li>Clarifies unclear/incomplete requirements early</li>
+                            <li>Encourages user feedback and involvement</li>
+                            <li>Reduces risk of building wrong system</li>
+                            <li>Uncovers missing functionalities</li>
+                            <li>Better final product alignment with user needs</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>❌ Disadvantages</h4>
+                        <ul>
+                            <li>Users may mistake prototype for final system</li>
+                            <li>Can lead to endless "analyze-prototype-code" loops</li>
+                            <li>Costly if prototyping is overused</li>
+                            <li>Final system poorly structured if prototype just patched</li>
+                            <li>Time delays if not managed properly</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight">
+                    <strong>When to Use:</strong><br>
+                    • Evolving, unclear, or ambiguous requirements<br>
+                    • Systems with significant user interface components<br>
+                    • Innovative products where user reactions hard to predict<br>
+                    • Need to visualize interactions and gather early feedback
+                </div>
+            </div>
+
+            <!-- Spiral Model -->
+            <div class="model-card" id="spiral">
+                <div class="model-title">6. Spiral Model (Boehm's Spiral)</div>
+                <p><strong>Risk-driven, iterative approach for large, complex projects</strong></p>
+                
+                <div class="diagram">
+                    <h4>Spiral Model Quadrants</h4>
+                    <pre>
+    1. PLANNING           |    2. RISK ANALYSIS
+    (Determine objectives,|    (Identify & resolve risks,
+     alternatives,        |     build prototypes)
+     constraints)         |
+    ─────────────────────────────────────────────
+    4. EVALUATION         |    3. ENGINEERING
+    (Customer review,     |    (Develop & test next
+     assess results,      |     level of product)
+     plan next spiral)    |
+
+            Each cycle = One complete spiral
+                    </pre>
+                </div>
+                
+                <div class="key-points">
+                    <strong>Structure:</strong>
+                    <ul>
+                        <li>Combines design, prototyping, and risk management</li>
+                        <li>Each spiral passes through four quadrants</li>
+                        <li>Project grows with each spiral iteration</li>
+                        <li>Heavy emphasis on risk analysis and mitigation</li>
+                        <li>Prototypes built during risk analysis phase</li>
+                    </ul>
+                </div>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>✅ Advantages</h4>
+                        <ul>
+                            <li>Strong emphasis on risk analysis & mitigation</li>
+                            <li>Suitable for high-risk projects</li>
+                            <li>Flexible - allows changes during development</li>
+                            <li>Users see system early through prototypes</li>
+                            <li>Can accommodate new technologies</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>❌ Disadvantages</h4>
+                        <ul>
+                            <li>Complex to manage - requires risk expertise</li>
+                            <li>Expensive due to repeated phases</li>
+                            <li>Not suitable for small/low-risk projects</li>
+                            <li>Success depends on effective risk analysis</li>
+                            <li>High overhead for simple projects</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight">
+                    <strong>When to Use:</strong><br>
+                    • Large, complex, and high-risk projects<br>
+                    • Mission-critical systems (military, aerospace)<br>
+                    • Projects expecting significant changes<br>
+                    • Research & development involved<br>
+                    • Path forward not entirely clear
+                </div>
+            </div>
+
+            <!-- Agile Model -->
+            <div class="model-card" id="agile">
+                <div class="model-title">7. Agile Model</div>
+                <p><strong>Modern, flexible, collaborative, and results-focused</strong></p>
+                
+                <div class="diagram">
+                    <h4>Agile Development Cycle</h4>
+                    <div class="flow-chart">
+                        <div class="flow-box">Plan (Sprint)</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">Design & Code</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">Test & Review</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">Deploy Increment</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">Gather Feedback</div>
+                        <div style="margin: 10px 0; color: #667eea; font-weight: bold;">↻ Repeat (1-4 weeks)</div>
+                    </div>
+                </div>
+                
+                <div class="key-points">
+                    <strong>Structure:</strong>
+                    <ul>
+                        <li>Umbrella term for iterative and collaborative principles</li>
+                        <li>Development in short cycles (sprints: 1-4 weeks)</li>
+                        <li>Cross-functional teams work closely with stakeholders</li>
+                        <li>Emphasizes adaptability and responding to change</li>
+                        <li>Continuous integration and testing</li>
+                    </ul>
+                </div>
+                
+                <div class="agile-principles">
+                    <h4>🚀 Core Agile Principles (from Agile Manifesto)</h4>
+                    <ul>
+                        <li><strong>Individuals and interactions</strong> over processes and tools</li>
+                        <li><strong>Working software</strong> over comprehensive documentation</li>
+                        <li><strong>Customer collaboration</strong> over contract negotiation</li>
+                        <li><strong>Responding to change</strong> over following a plan</li>
+                    </ul>
+                </div>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>✅ Advantages</h4>
+                        <ul>
+                            <li>Highly adaptive to changing requirements</li>
+                            <li>Frequent delivery of working software</li>
+                            <li>Strong collaboration with stakeholders</li>
+                            <li>Higher customer satisfaction</li>
+                            <li>Improved quality through continuous testing</li>
+                            <li>Early and continuous value delivery</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>❌ Disadvantages</h4>
+                        <ul>
+                            <li>Requires strong team coordination</li>
+                            <li>Needs experienced, committed members</li>
+                            <li>Challenging to predict total effort/timeline</li>
+                            <li>Documentation can be neglected</li>
+                            <li>Less suitable for fixed scope/budget projects</li>
+                            <li>Requires high stakeholder involvement</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight">
+                    <strong>When to Use:</strong><br>
+                    • Requirements expected to change frequently<br>
+                    • Teams can work closely with stakeholders<br>
+                    • Environments valuing rapid delivery<br>
+                    • Innovative projects involving exploration<br>
+                    • Modern software development and product teams
+                </div>
+            </div>
+
+            <!-- SCRUM Model -->
+            <div class="model-card" id="scrum">
+                <div class="model-title">8. SCRUM (A Type of Agile Framework)</div>
+                <p><strong>A popular, structured framework for implementing Agile</strong></p>
+                
+                <div class="diagram">
+                    <h4>SCRUM Process Flow</h4>
+                    <pre>
+Product Backlog → Sprint Planning → Sprint Backlog
+                                         ↓
+    Sprint Review ← Sprint (2-4 weeks) ← Daily Scrums
+         ↓                                   ↑
+Sprint Retrospective → Lessons Learned ─────┘
+         ↓
+    Next Sprint Planning...
+                    </pre>
+                </div>
+                
+                <div class="key-points">
+                    <strong>Structure:</strong>
+                    <ul>
+                        <li>Work done in fixed-length iterations called <strong>Sprints</strong> (2-4 weeks)</li>
+                        <li>Each Sprint delivers potentially shippable product increment</li>
+                        <li>Defined roles, events, and artifacts</li>
+                        <li>Self-organizing, cross-functional teams</li>
+                    </ul>
+                </div>
+
+                <div class="scrum-roles">
+                    <div class="role-card">
+                        <h4>🎯 Product Owner</h4>
+                        <p>Represents customers/stakeholders. Defines and prioritizes features in Product Backlog. Responsible for the "what".</p>
+                    </div>
+                    <div class="role-card">
+                        <h4>🛡️ Scrum Master</h4>
+                        <p>Facilitates Scrum process, removes impediments, ensures practices are followed. A servant-leader.</p>
+                    </div>
+                    <div class="role-card">
+                        <h4>👥 Development Team</h4>
+                        <p>Self-organizing, cross-functional group who build the product increment (design, code, test).</p>
+                    </div>
+                </div>
+
+                <div class="key-points">
+                    <strong>🎯 Key SCRUM Events & Artifacts:</strong>
+                    <ul>
+                        <li><strong>Product Backlog:</strong> Prioritized list of all desired features/requirements</li>
+                        <li><strong>Sprint Planning:</strong> Team selects items for upcoming Sprint, creates Sprint Backlog</li>
+                        <li><strong>Daily Scrum (Stand-up):</strong> 15-min daily sync meeting (What did I do? What will I do? Any impediments?)</li>
+                        <li><strong>Sprint Review:</strong> Demonstrate completed work to stakeholders, get feedback</li>
+                        <li><strong>Sprint Retrospective:</strong> Team reflects on Sprint to improve next one</li>
+                    </ul>
+                </div>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>✅ Advantages</h4>
+                        <ul>
+                            <li>Delivers working software frequently and fast</li>
+                            <li>Improves team communication & transparency</li>
+                            <li>Encourages accountability & continuous improvement</li>
+                            <li>Highly adaptable to changes</li>
+                            <li>Clear roles and responsibilities</li>
+                            <li>Regular feedback and course correction</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>❌ Disadvantages</h4>
+                        <ul>
+                            <li>Requires discipline & experienced team members</li>
+                            <li>Can be chaotic if poorly managed</li>
+                            <li>Scope creep if Product Backlog not managed well</li>
+                            <li>Not ideal for very stable requirements</li>
+                            <li>Requires strong commitment from all roles</li>
+                            <li>Fixed deadline/budget projects may struggle</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight">
+                    <strong>When to Use:</strong><br>
+                    • Projects with frequent changes and evolving requirements<br>
+                    • Modern software development and product teams<br>
+                    • Startups and dynamic environments<br>
+                    • When rapid feedback and continuous delivery critical<br>
+                    • Teams that can commit to Scrum practices
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+

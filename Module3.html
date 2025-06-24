@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineering Module 3 - Study Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Software Engineering Module 3</h1>
+            <p>Complete Study Guide: Debugging, Testing & Maintenance</p>
+        </div>
+
+        <div class="nav">
+            <a href="Module1.html">Module 1</a>
+            <a href="Module2.html">Module 2</a>
+            <a href="Module3.html" class="active-module">Module 3</a>
+            <a href="Module4.html">Module 4</a>
+        </div>
+
+        <div class="section" id="debugging">
+            <h2>1. Software Debugging Process</h2>
+            
+            <div class="subsection">
+                <h3>1.1 Progressive Grey-Boxing at Multiple Abstractions</h3>
+                <div class="diagram">
+                    <div class="flow-chart">
+                        <div class="flow-box">Black Box Testing</div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-box" style="background-color: #aaa; border-left-color: #888;">Grey Box Testing</div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-box" style="background-color: #fff; color:#333; border: 2px solid #667eea;">White Box Testing</div>
+                    </div>
+                </div>
+                
+                <div class="key-points">
+                    <h4>Key Concept: Progressive Grey-Boxing</h4>
+                    <ul>
+                        <li><strong>Black Box</strong>: Test without knowing internal structure.</li>
+                        <li><strong>Grey Box</strong>: Combine black box and white box approaches (partial knowledge).</li>
+                        <li><strong>White Box</strong>: Test with full knowledge of internal code.</li>
+                        <li><strong>Multiple Abstractions</strong>: Apply at different levels (unit, integration, system).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>1.2 Debugging Life Cycle</h3>
+                <div class="lifecycle-diagram">
+                    <div class="lifecycle-circle">Problem Identification</div>
+                    <div class="lifecycle-arrow">→</div>
+                    <div class="lifecycle-circle">Problem Analysis</div>
+                    <div class="lifecycle-arrow">→</div>
+                    <div class="lifecycle-circle">Fix Implementation</div>
+                    <div class="lifecycle-arrow">→</div>
+                    <div class="lifecycle-circle">Fix Verification</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>1.3 Debugging Guidelines</h3>
+                <div class="key-points">
+                    <ul>
+                        <li><strong>Reproduce the bug consistently:</strong> The first step to understanding.</li>
+                        <li><strong>Isolate the problem area:</strong> Narrow down the source of the bug.</li>
+                        <li><strong>Use debugging tools effectively:</strong> Leverage IDE debuggers, loggers.</li>
+                        <li><strong>Understand the system:</strong> Know how components interact.</li>
+                        <li><strong>Check recent changes:</strong> Bugs often appear in new or modified code.</li>
+                        <li><strong>Fix one bug at a time:</strong> Avoid introducing new issues.</li>
+                        <li><strong>Document the debugging process:</strong> For complex bugs, note steps taken.</li>
+                        <li><strong>Test the fix thoroughly:</strong> Ensure the bug is gone and no regressions.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="bug-tracking">
+            <h2>2. Software Issue/Bug Tracking Process</h2>
+            
+            <div class="subsection">
+                <h3>2.1 Sync Issue Tracking with SDLC Phases</h3>
+                <div class="diagram">
+                    <div class="flow-chart">
+                        <div class="flow-box">Requirements Phase</div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-box">Design Phase</div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-box">Implementation Phase</div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-box">Testing Phase</div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-box">Deployment Phase</div>
+                    </div>
+                    <p style="text-align:center; margin-top:10px;"><strong>Bug tracking integrated at each phase.</strong> Issues can arise at any stage.</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>2.2 Issue/Bug Life Cycle</h3>
+                <div class="lifecycle-diagram">
+                    <div class="lifecycle-circle">New / Reported</div>
+                    <div class="lifecycle-arrow">→</div>
+                    <div class="lifecycle-circle">Assigned / Open</div>
+                    <div class="lifecycle-arrow">→</div>
+                    <div class="lifecycle-circle">In Progress / Fixing</div>
+                    <div class="lifecycle-arrow">→</div>
+                    <div class="lifecycle-circle">Fixed / Resolved</div>
+                    <div class="lifecycle-arrow">→</div>
+                    <div class="lifecycle-circle">Verified / Closed</div>
+                </div>
+                <div class="highlight">
+                    Other states can include: Reopened, Deferred, Rejected, Cannot Reproduce.
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>2.3 Bug Tracking Best Practices</h3>
+                <div class="key-points">
+                    <ul>
+                        <li>Use a dedicated bug tracking system (e.g., Jira, Bugzilla).</li>
+                        <li>Provide clear and descriptive bug titles.</li>
+                        <li>Include detailed, step-by-step reproduction instructions.</li>
+                        <li>Specify environment details (OS, browser, software version).</li>
+                        <li>Attach screenshots, logs, or videos if helpful.</li>
+                        <li>Assign priority (e.g., Low, Medium, High, Critical) and severity (e.g., Trivial, Minor, Major, Blocker).</li>
+                        <li>Assign bugs to appropriate team members or queues.</li>
+                        <li>Keep bug status updated regularly.</li>
+                        <li>Link bugs to requirements, test cases, and code commits.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="testing">
+            <h2>3. Software Testing Process</h2>
+            
+            <div class="subsection">
+                <h3>3.1 Verification and Validation</h3>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>✅ Verification</h4>
+                        <p>"Are we building the product right?"</p>
+                        <ul>
+                            <li>Focuses on process and standards.</li>
+                            <li>Checks if software conforms to specifications.</li>
+                            <li>Static activities: Reviews, Walkthroughs, Inspections.</li>
+                            <li>Done before validation.</li>
+                        </ul>
+                    </div>
+                    <div class="cons" style="border-left-color: #17a2b8; background-color: #d1ecf1;">
+                        <h4>✅ Validation</h4>
+                        <p>"Are we building the right product?"</p>
+                        <ul>
+                            <li>Focuses on user needs and requirements.</li>
+                            <li>Checks if software meets user expectations.</li>
+                            <li>Dynamic activities: Testing (Functional, Non-functional).</li>
+                            <li>Done after verification.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>3.2 Testing Types (Based on Knowledge)</h3>
+                <div class="content-grid">
+                    <div class="model-card">
+                        <div class="model-title">⚫ Black Box Testing</div>
+                        <p>Testing without knowledge of internal structure, code, or logic. Focuses on inputs and outputs (functional behavior).</p>
+                        <p><strong>Techniques:</strong> Equivalence Partitioning, Boundary Value Analysis, Decision Tables.</p>
+                    </div>
+                    <div class="model-card">
+                        <div class="model-title">⚪ White Box Testing</div>
+                        <p>Testing with complete knowledge of internal code structure, logic, and paths. Focuses on internal workings.</p>
+                        <p><strong>Techniques:</strong> Statement Coverage, Branch Coverage, Path Coverage, Condition Coverage.</p>
+                    </div>
+                    <div class="model-card">
+                        <div class="model-title" style="background: linear-gradient(135deg, #888, #bbb);">🔘 Grey Box Testing</div>
+                        <p>Combination of black box and white box. Tester has partial knowledge of internal structures, like database schemas or API details.</p>
+                        <p>Useful for integration testing, end-to-end testing of web services.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>3.3 Code Coverage & Cyclomatic Complexity</h3>
+                <div class="key-points">
+                    <h4>Code Coverage Types</h4>
+                    <ul>
+                        <li><strong>Statement Coverage</strong>: Percentage of executable statements exercised by tests.</li>
+                        <li><strong>Branch Coverage (Decision Coverage)</strong>: Percentage of branches (e.g., if-else outcomes) taken.</li>
+                        <li><strong>Path Coverage</strong>: Percentage of all possible execution paths through the code exercised. Often impractical for complex code.</li>
+                        <li><strong>Condition Coverage</strong>: Each boolean sub-expression in a decision is evaluated to true and false.</li>
+                    </ul>
+                </div>
+
+                <div class="key-points">
+                    <h4>Cyclomatic Complexity</h4>
+                    <ul>
+                        <li>Measures the structural complexity of a program's control flow.</li>
+                        <li>Formula: M = E - N + 2P (where E = number of edges, N = number of nodes, P = number of connected components/exit points).</li>
+                        <li>A higher complexity value indicates more complex code, potentially harder to test and maintain.</li>
+                        <li>Can be used to guide the number of test cases needed (often M = minimum test cases for branch coverage).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>3.4 Directed Automated Random Testing (DART)</h3>
+                <div class="diagram">
+                    <h4>DART Process</h4>
+                    <div class="flow-chart">
+                        <div class="flow-box">1. Instrument Program</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">2. Generate Random Inputs</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">3. Execute Program & Collect Path Constraints</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">4. Solve Constraints to Find New Inputs (to cover new paths)</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">5. Repeat from Step 2</div>
+                    </div>
+                </div>
+                <div class="highlight">DART aims to automatically explore different execution paths in a program to find bugs by systematically generating inputs.</div>
+            </div>
+
+            <div class="subsection">
+                <h3>3.5 Testing Levels</h3>
+                <div class="content-grid">
+                    <div class="model-card">
+                        <div class="model-title">🔧 Unit Testing</div>
+                        <p>Testing individual components, modules, or functions in isolation. Typically done by developers.</p>
+                    </div>
+                    <div class="model-card">
+                        <div class="model-title">🔗 Integration Testing</div>
+                        <p>Testing the interaction between integrated components or modules. Verifies interfaces and data flow.</p>
+                    </div>
+                    <div class="model-card">
+                        <div class="model-title">🖥️ System Testing</div>
+                        <p>Testing the complete, integrated system against specified requirements. Includes functional and non-functional testing.</p>
+                    </div>
+                     <div class="model-card">
+                        <div class="model-title">👍 Acceptance Testing</div>
+                        <p>Formal testing with respect to user needs, requirements, and business processes. Often conducted by end-users or clients.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>3.6 Testing Phases (User Involvement)</h3>
+                 <div class="content-grid">
+                    <div class="model-card">
+                        <div class="model-title">🅰️ Alpha Testing</div>
+                        <p>Internal acceptance testing performed by the development/QA team or internal users at the developer's site. Simulates real user environment.</p>
+                    </div>
+                    <div class="model-card">
+                        <div class="model-title">🅱️ Beta Testing</div>
+                        <p>External acceptance testing performed by a limited number of actual end-users in their own environment. Gathers feedback before final release.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="maintenance">
+            <h2>4. Software Maintenance</h2>
+            
+            <div class="subsection">
+                <h3>4.1 Maintenance Types</h3>
+                <div class="content-grid">
+                    <div class="model-card">
+                        <div class="model-title">Corrective Maintenance</div>
+                        <p>Reactive modification of a software product performed after delivery to correct discovered problems (bugs/errors).</p>
+                    </div>
+                    <div class="model-card">
+                        <div class="model-title">Adaptive Maintenance</div>
+                        <p>Modification of a software product performed after delivery to keep it usable in a changed or changing environment (e.g., OS updates, new hardware).</p>
+                    </div>
+                    <div class="model-card">
+                        <div class="model-title">Perfective Maintenance</div>
+                        <p>Modification of a software product after delivery to improve performance, maintainability, or other attributes (e.g., new features, enhancements, code refactoring).</p>
+                    </div>
+                    <div class="model-card">
+                        <div class="model-title">Preventive Maintenance</div>
+                        <p>Modification of a software product after delivery to detect and correct latent faults before they become effective faults (e.g., updating documentation, optimizing code to prevent future issues).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>4.2 Regression Testing</h3>
+                <div class="diagram">
+                    <h4>Regression Testing Process</h4>
+                    <div class="flow-chart">
+                        <div class="flow-box">1. Code Change / Bug Fix / New Feature</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">2. Select Relevant Existing Test Cases</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">3. Execute Selected Test Cases</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box">4. Verify Results (Ensure no existing functionality is broken)</div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <strong>Goal:</strong> Ensure that changes (bug fixes or new features) have not adversely affected existing functionalities. Crucial during maintenance.
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>4.3 Reverse Engineering & Re-Engineering</h3>
+                <div class="key-points">
+                    <h4>Engineering Processes in Maintenance</h4>
+                    <ul>
+                        <li><strong>Reverse Engineering</strong>: Analyzing an existing system to identify its components, their interrelationships, and to create representations of the system in another form or at a higher level of abstraction. Does not change the system itself.</li>
+                        <li><strong>Re-Engineering (Restructuring)</strong>: Examining and altering an existing system to reconstitute it in a new form, often to improve quality, maintainability, or performance, while preserving its functionality. This involves changes to the system.</li>
+                        <li><strong>Software Evolution</strong>: The process of developing software initially, then repeatedly updating it for various reasons over its lifespan. Maintenance is a key part of evolution.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>4.4 Quality Management in Maintenance</h3>
+                <div class="content-grid">
+                    <div class="model-card">
+                        <div class="model-title">📋 Process Improvement</div>
+                        <p>Continuously enhancing development and maintenance processes to improve efficiency, quality, and reduce costs. Involves feedback loops and learning from past experiences.</p>
+                    </div>
+                    <div class="model-card">
+                        <div class="model-title">⚠️ Risk Management</div>
+                        <p>Identifying, assessing, and mitigating risks associated with software maintenance, such as introducing new bugs, impacting performance, or exceeding budget/schedule.</p>
+                    </div>
+                </div>
+                 <div class="highlight">
+                    Effective quality management ensures that maintenance activities enhance the software rather than degrade it over time.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
