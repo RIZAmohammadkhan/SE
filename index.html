@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineering - Study Guide Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles specific to index.html, adapted to the beige theme */
+        .index-header {
+            text-align: center;
+            padding: 40px 20px;
+            background: #E1C699; /* Muted, warm beige/tan (from theme) */
+            color: #5D4037; /* Darker brown for contrast (from theme) */
+            border-radius: 12px; /* Consistent radius */
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07); /* Softer shadow */
+        }
+
+        .index-header h1 {
+            font-size: 2.8em;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* More subtle shadow */
+        }
+
+        .index-header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .module-navigation-section {
+            padding: 30px; /* Increased padding */
+            background: #FEFBF3; /* Very light beige (from theme) */
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06); /* Softer shadow (from theme) */
+        }
+
+        .module-navigation-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+            font-weight: 600;
+            color: #795548; /* Deeper Brown (from theme) */
+            border-bottom: 2px solid #D2B48C; /* Tan accent (from theme) */
+            padding-bottom: 12px;
+        }
+
+        .module-links-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .module-links-list li a {
+            display: block;
+            padding: 25px;
+            background-color: #FFFFFF; /* White for card background */
+            border: 1px solid #EAE0D1; /* Lighter, beige-toned border (from theme) */
+            border-left: 6px solid #B08968; /* Muted terracotta accent (from theme) */
+            border-radius: 10px;
+            text-decoration: none;
+            color: #4A3B31; /* Main text color (from theme) */
+            transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border-left-color 0.25s ease-in-out;
+            height: 100%;
+            box-sizing: border-box;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.05); /* Subtle initial shadow */
+        }
+
+        .module-links-list li a:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Softer hover shadow (from theme) */
+            border-left-color: #A0522D; /* Sienna/Terracotta on hover (from theme) */
+        }
+
+        .module-links-list li a strong {
+            display: block;
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #A0522D; /* Sienna/Terracotta (from theme) */
+            margin-bottom: 12px;
+        }
+
+        .module-links-list li a .module-description {
+            font-size: 0.95em;
+            color: #4A3B31; /* Main text color (from theme) */
+            line-height: 1.6;
+        }
+
+        .welcome-section {
+            text-align: center;
+            margin-top: 40px;
+            padding: 25px; /* Increased padding */
+            background-color: #FEFBF3; /* Very light beige (from theme) */
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06); /* Consistent soft shadow */
+        }
+        .welcome-section p {
+            font-size: 1.1em;
+            color: #4A3B31; /* Main text color (from theme) */
+        }
+
+        /* Media query for smaller screens to stack cards */
+        @media (max-width: 768px) {
+            .module-links-list {
+                grid-template-columns: 1fr; /* Stack cards in a single column */
+            }
+            .index-header h1 {
+                font-size: 2.4em;
+            }
+            .index-header p {
+                font-size: 1.1em;
+            }
+            .module-navigation-section h2 {
+                font-size: 1.8em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="index-header">
+            <h1>Software Engineering Study Guides</h1>
+            <p>Your comprehensive resource for mastering Software Engineering principles.</p>
+        </div>
+        
+        <div class="module-navigation-section">
+            <h2>Explore Modules</h2>
+            <ul class="module-links-list">
+                <li>
+                    <a href="Module1.html">
+                        <strong>Module 1:</strong>
+                        <span class="module-description">Introduction to Software Engineering & SDLC. Covers engineering fundamentals, the software crisis, SDLC phases, and development models like Waterfall, Iterative, V-Model, RAD, Prototyping, Spiral, Agile, and Scrum.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Module2.html">
+                        <strong>Module 2:</strong>
+                        <span class="module-description">Requirement Engineering, Software Design & Object Modeling. Includes feasibility studies, functional/non-functional requirements, design issues, modularity, coupling/cohesion, DFDs, FPA, COCOMO, LOC, Cyclomatic Complexity, UI design, Unified Process, UML diagrams (Use Case, Sequence, etc.), and coding standards.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Module3.html">
+                        <strong>Module 3:</strong>
+                        <span class="module-description">Debugging, Testing & Maintenance. Focuses on debugging processes, bug tracking, verification vs. validation, testing types (black/white/grey box), code coverage, DART, testing levels (unit, integration, system, acceptance), Alpha/Beta testing, and software maintenance (corrective, adaptive, perfective, preventive), regression testing, and re-engineering.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Module4.html">
+                        <strong>Module 4:</strong>
+                        <span class="module-description">Release, Versioning, Project Management & Smart Engineering. Details software release processes, semantic versioning, branching strategies (Git Flow), merging, commit guidelines, project management (PMC cycle, estimates, Gantt, PERT), people/program management, and AI in SE / SE for AI (MLOps).</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="welcome-section">
+            <p>Select a module card above to dive into the detailed study guide for that topic. Happy learning!</p>
+        </div>
+    </div>
+</body>
+</html>

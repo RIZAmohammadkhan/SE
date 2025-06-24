@@ -1,3 +1,5 @@
+/* --- Modern Beige Theme --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,117 +7,126 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.7; /* Increased for better readability */
+    color: #4A3B31; /* Dark, warm brown for text */
+    background-color: #FAF0E6; /* Main beige background (Linen) */
     min-height: 100vh;
     padding-top: 1px; /* Fix margin collapse */
+    -webkit-font-smoothing: antialiased; /* Smoother fonts */
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
     max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin: 30px auto; /* Increased top/bottom margin */
+    padding: 25px; /* Increased padding */
+    background: rgba(255, 253, 245, 0.95); /* Very light, almost white beige (Old Lace, slightly transparent) */
+    border-radius: 12px; /* Slightly softer radius */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Softer, more diffuse shadow */
 }
 
 .header {
     text-align: center;
-    padding: 30px 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-radius: 15px;
+    padding: 35px 20px; /* Adjusted padding */
+    background: #E1C699; /* Muted, warm beige/tan (Tan variant) */
+    color: #5D4037; /* Darker brown for contrast on header */
+    border-radius: 12px;
     margin-bottom: 30px;
 }
 
 .header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 2.6em; /* Slightly larger */
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* More subtle shadow */
 }
 
 .header p {
-    font-size: 1.1em;
+    font-size: 1.15em;
+    opacity: 0.9;
 }
 
 .nav {
-    background: #2d3748;
-    padding: 15px;
+    background: #D2B48C; /* Tan, complements header */
+    padding: 12px;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-align: center;
     overflow-x: auto;
     white-space: nowrap;
 }
 
 .nav a {
-    color: #e2e8f0;
+    color: #5D4037; /* Dark brown for contrast on tan nav */
     text-decoration: none;
-    margin: 0 10px;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background 0.3s;
-    display: inline-block; /* Ensures proper padding and wrapping for nowrap */
+    margin: 0 8px;
+    padding: 10px 15px; /* Slightly more padding */
+    border-radius: 6px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    display: inline-block;
+    font-weight: 500;
 }
 
 .nav a:hover {
-    background: #667eea;
+    background-color: #B08968; /* Muted terracotta/brown */
+    color: #FFFFFF;
 }
 
 .nav a.active-module {
-    background-color: #5a009d; /* A color that stands out from the nav background */
+    background-color: #795548; /* Deeper Brown */
     font-weight: bold;
     color: white;
 }
 
 .section {
-    margin: 30px 0;
-    padding: 25px;
-    background: #f8f9fa;
+    margin: 35px 0; /* Increased margin */
+    padding: 30px; /* Increased padding */
+    background: #FEFBF3; /* Very light beige, almost white (Floral White variant) */
     border-radius: 10px;
-    border-left: 5px solid #667eea;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #B08968; /* Muted terracotta accent */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* Softer shadow */
 }
 
 .section h2 {
-    color: #667eea;
-    margin-bottom: 20px;
-    font-size: 1.8em;
-    border-bottom: 2px solid #667eea;
-    padding-bottom: 10px;
+    color: #795548; /* Deeper Brown */
+    margin-bottom: 25px;
+    font-size: 2em; /* Adjusted size */
+    font-weight: 600;
+    border-bottom: 2px solid #D2B48C; /* Tan accent */
+    padding-bottom: 12px;
 }
 
 .section h3 {
-    color: #764ba2;
-    margin: 20px 0 15px 0;
-    font-size: 1.4em;
+    color: #A0522D; /* Sienna/Terracotta */
+    margin: 25px 0 18px 0;
+    font-size: 1.6em;
+    font-weight: 600;
 }
 
 .section h4 {
-    color: #6a1b9a; /* Slightly lighter purple for H4 */
-    margin: 15px 0 10px 0;
-    font-size: 1.2em;
+    color: #B08968; /* Muted terracotta, lighter than H3 */
+    margin: 20px 0 12px 0;
+    font-size: 1.3em;
+    font-weight: 500;
 }
 
 .subsection {
-    margin: 20px 0;
-    padding: 15px;
-    background: white;
+    margin: 25px 0;
+    padding: 20px;
+    background: #FFFFFF; /* Pure white for contrast within sections */
     border-radius: 8px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #EAE0D1; /* Lighter border, beige-toned */
 }
 
 .diagram {
-    background: white;
-    border: 2px solid #667eea;
-    border-radius: 10px;
+    background: #FFFFFF;
+    border: 1px solid #D2B48C; /* Tan border */
+    border-radius: 8px;
     padding: 20px;
-    margin: 20px 0;
+    margin: 25px 0;
     text-align: center;
-    font-family: 'Courier New', monospace;
+    font-family: 'Fira Code', 'Consolas', 'Menlo', 'Courier New', monospace; /* Modern mono font */
     overflow-x: auto;
 }
 
@@ -123,196 +134,211 @@ body {
     text-align: left;
     white-space: pre;
     font-size: 0.9em;
+    line-height: 1.5;
 }
 
 .highlight {
-    background: #fff3cd;
-    padding: 15px;
+    background: #FFF8E1; /* Soft yellow/gold */
+    padding: 18px;
     border-radius: 8px;
-    border-left: 4px solid #ffc107;
-    margin: 15px 0;
+    border-left: 4px solid #FFD180; /* Gold accent */
+    margin: 20px 0;
+    color: #795548; /* Dark brown text for readability */
 }
 
 .key-points {
-    background: #d1ecf1;
-    padding: 15px;
+    background: #E3F2FD; /* Soft, desaturated blue */
+    padding: 18px;
     border-radius: 8px;
-    border-left: 4px solid #17a2b8;
-    margin: 15px 0;
+    border-left: 4px solid #90CAF9; /* Light blue accent */
+    margin: 20px 0;
+    color: #37474F; /* Dark slate grey text */
 }
 
 .key-points ul, .pros ul, .cons ul {
     margin-left: 20px;
-    padding-left: 0; /* Reset default padding */
+    padding-left: 5px; /* Adjust for custom bullets or spacing */
 }
 .key-points ul li, .pros ul li, .cons ul li {
-    margin: 8px 0;
+    margin: 10px 0; /* More spacing between list items */
 }
 
 
 .pros-cons {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin: 20px 0;
+    gap: 25px; /* Increased gap */
+    margin: 25px 0;
 }
 
 .pros {
-    background: #d4edda;
-    padding: 15px;
+    background: #E8F5E9; /* Soft green */
+    padding: 18px;
     border-radius: 8px;
-    border-left: 4px solid #28a745;
+    border-left: 4px solid #A5D6A7; /* Light green accent */
+    color: #2E7D32; /* Dark green text */
 }
 
 .cons {
-    background: #f8d7da;
-    padding: 15px;
+    background: #FFEBEE; /* Soft red/pink */
+    padding: 18px;
     border-radius: 8px;
-    border-left: 4px solid #dc3545;
+    border-left: 4px solid #EF9A9A; /* Light red accent */
+    color: #C62828; /* Dark red text */
 }
 
 .table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-    background: white;
+    margin: 25px 0;
+    background: #FFFFFF;
     border-radius: 8px;
-    overflow: hidden; /* For border-radius on table */
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07); /* Softer shadow */
 }
 
 .table th, .table td {
-    padding: 12px;
+    padding: 14px 16px; /* Increased padding */
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #EAE0D1; /* Lighter, beige-toned border */
 }
 
 .table th {
-    background: #667eea;
-    color: white;
-    font-weight: bold;
+    background: #C8AD7F; /* Muted beige/brown for table header */
+    color: #4A3B31; /* Dark brown text for contrast */
+    font-weight: 600;
 }
 
 .table tr:hover {
-    background: #f5f5f5;
+    background: #FAF0E6; /* Main body beige for subtle hover */
+}
+.table tr:last-child td {
+    border-bottom: none; /* Remove border from last row */
 }
 
 .flow-chart {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin: 20px 0;
+    gap: 12px;
+    margin: 25px 0;
 }
 
 .flow-box {
-    background: #667eea;
+    background: #B08968; /* Muted terracotta */
     color: white;
-    padding: 12px 20px;
+    padding: 14px 22px;
     border-radius: 8px;
     text-align: center;
     min-width: 180px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .flow-arrow {
-    font-size: 24px;
-    color: #667eea;
+    font-size: 26px;
+    color: #B08968; /* Muted terracotta */
     font-weight: bold;
 }
 
 .model-card {
-    background: white;
+    background: #FFFFFF;
     border-radius: 10px;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border: 2px solid #e0e0e0;
-    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 25px;
+    margin: 25px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    border: 1px solid #EAE0D1; /* Lighter border */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .model-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .model-title {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #B08968, #A0522D); /* Terracotta gradient */
     color: white;
-    padding: 12px 20px;
-    border-radius: 8px 8px 0 0; /* Match card top radius */
-    font-size: 1.3em;
-    font-weight: bold;
-    margin: -20px -20px 15px -20px; /* Adjust to fill top */
+    padding: 14px 22px;
+    border-radius: 8px 8px 0 0;
+    font-size: 1.4em;
+    font-weight: 600;
+    margin: -25px -25px 20px -25px; /* Adjust to fill top */
     text-align: center;
 }
 
 .timeline {
-    background: #f8f9fa;
-    padding: 20px;
+    background: #FEFBF3; /* Very light beige */
+    padding: 25px;
     border-radius: 10px;
-    margin: 20px 0;
-    border-left: 4px solid #667eea;
+    margin: 25px 0;
+    border-left: 4px solid #B08968; /* Muted terracotta */
 }
 
 .timeline-item {
     display: flex;
-    margin: 15px 0;
-    padding: 10px;
+    margin: 18px 0;
+    padding: 12px;
     background: white;
     border-radius: 8px;
     align-items: center;
+    border: 1px solid #EAE0D1;
 }
 
 .timeline-year {
-    background: #667eea;
+    background: #B08968; /* Muted terracotta */
     color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
+    padding: 10px 14px;
+    border-radius: 6px;
     font-weight: bold;
     min-width: 100px;
     text-align: center;
-    margin-right: 15px;
+    margin-right: 18px;
 }
 
 .agile-principles {
-    background: #e7f3ff;
-    padding: 20px;
+    background: #E3F2FD; /* Soft blue from key-points */
+    padding: 25px;
     border-radius: 10px;
-    border-left: 4px solid #007bff;
-    margin: 20px 0;
+    border-left: 4px solid #90CAF9; /* Light blue accent */
+    margin: 25px 0;
+    color: #37474F;
 }
 .agile-principles ul { margin-left: 20px; }
 
 .scrum-roles {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    margin: 20px 0;
+    gap: 20px;
+    margin: 25px 0;
 }
 
 .role-card {
     background: white;
-    padding: 15px;
+    padding: 20px;
     border-radius: 8px;
-    border: 2px solid #667eea;
+    border: 1px solid #D2B48C; /* Tan border */
     text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .role-card h4 {
-    color: #667eea;
-    margin-bottom: 10px;
+    color: #A0522D; /* Terracotta */
+    margin-bottom: 12px;
+    font-size: 1.2em;
+    font-weight: 600;
 }
 
 .code-block {
-    background: #2d3748;
-    color: #e2e8f0;
-    padding: 15px;
+    background: #2E2E2E; /* Darker, less blue grey */
+    color: #E0E0E0; /* Slightly off-white for text */
+    padding: 18px;
     border-radius: 8px;
-    font-family: 'Courier New', monospace;
-    margin: 15px 0;
+    font-family: 'Fira Code', 'Consolas', 'Menlo', 'Courier New', monospace;
+    margin: 20px 0;
     overflow-x: auto;
     white-space: pre;
+    font-size: 0.9em;
+    line-height: 1.6;
 }
 
 /* Styles for Module 3 specific content, adapted */
@@ -321,191 +347,222 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 30px 0;
-    gap: 10px;
+    margin: 35px 0;
+    gap: 15px;
 }
 
 .lifecycle-circle {
-    width: 120px;
-    height: 80px; /* More rectangular to fit text */
+    width: 130px; /* Slightly wider */
+    height: 85px;
     border-radius: 10px;
-    background: #764ba2; /* Consistent theme color */
+    background: #A0522D; /* Terracotta */
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
+    font-weight: 500;
     text-align: center;
-    padding: 5px;
-    font-size: 0.9em;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 8px;
+    font-size: 0.95em;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
 .lifecycle-arrow {
-    font-size: 2em;
-    color: #764ba2;
+    font-size: 2.2em;
+    color: #A0522D; /* Terracotta */
 }
 
-.content-grid { /* Generic grid for testing types, maintenance items, etc. */
+.content-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin: 20px 0;
+    gap: 25px;
+    margin: 25px 0;
 }
 
 /* Styles for Module 4 specific content, adapted */
-.version-example { /* Using highlight style, but can be specific if needed */
-    background: #e8f4f8;
-    border: 1px solid #17a2b8;
-    padding: 15px;
+.version-example {
+    background: #EFEBE9; /* Brownish-grey beige */
+    border: 1px solid #BCAAA4; /* Muted brown border */
+    padding: 18px;
     border-radius: 8px;
-    margin: 10px 0;
-    font-family: 'Courier New', monospace;
-    font-weight: bold;
+    margin: 15px 0;
+    font-family: 'Fira Code', 'Consolas', 'Menlo', 'Courier New', monospace;
+    font-weight: 500; /* Bolder might be too much with Fira Code */
     overflow-x: auto;
     white-space: pre-wrap;
+    color: #5D4037; /* Dark brown text */
+    font-size: 0.9em;
 }
 
 .branching-diagram {
-    background: #f0f4f8; /* Lighter background */
-    padding: 20px;
+    background: #FCF8F3; /* Very light, warm off-white */
+    padding: 25px;
     border-radius: 10px;
-    margin: 20px 0;
+    margin: 25px 0;
     position: relative;
     overflow-x: auto;
-    border: 1px solid #d6e0ea;
+    border: 1px solid #E0D8CD; /* Soft beige border */
 }
 
 .branch {
     display: flex;
     align-items: center;
-    margin: 15px 0;
+    margin: 18px 0;
     position: relative;
-    min-width: 300px; /* Ensure it doesn't get too squished */
+    min-width: 300px;
 }
 
 .branch-line {
     height: 4px;
-    background: #007bff; /* Standard blue */
-    flex-grow: 1; /* Allow it to grow */
-    min-width: 50px; /* Minimum length */
+    background: #B08968; /* Muted terracotta */
+    flex-grow: 1;
+    min-width: 50px;
     border-radius: 2px;
 }
 
 .branch-node {
     width: 18px;
     height: 18px;
-    background: #28a745; /* Standard green */
+    background: #A5D6A7; /* Soft green, for visual distinction */
     border-radius: 50%;
-    margin: 0 8px;
+    margin: 0 10px; /* Increased margin */
     border: 2px solid white;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
-    flex-shrink: 0; /* Prevent shrinking */
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    flex-shrink: 0;
 }
 
 .branch-label {
     background: white;
-    padding: 6px 12px;
-    border-radius: 15px;
-    font-weight: bold;
-    color: #495057;
-    border: 1px solid #ccc;
-    min-width: 100px; /* Ensure text fits */
+    padding: 8px 14px;
+    border-radius: 15px; /* Pill shape */
+    font-weight: 500;
+    color: #5D4037; /* Dark brown text */
+    border: 1px solid #D2B48C; /* Tan border */
+    min-width: 100px;
     text-align: center;
-    margin-right: 10px; /* Space before line */
-    flex-shrink: 0; /* Prevent shrinking */
+    margin-right: 12px;
+    flex-shrink: 0;
 }
-.branch span { /* For the description text */
-    margin-left: 10px;
+.branch span {
+    margin-left: 12px;
     font-style: italic;
-    color: #555;
+    color: #757575; /* Medium grey for less emphasis */
     flex-shrink: 0;
 }
 
 
 .gantt-chart {
     background: white;
-    border: 1px solid #dee2e6;
+    border: 1px solid #EAE0D1; /* Lighter beige border */
     border-radius: 8px;
-    overflow-x: auto; /* Important for responsiveness */
-    margin: 20px 0;
-    padding: 10px;
+    overflow-x: auto;
+    margin: 25px 0;
+    padding: 15px; /* Add some internal padding */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
 }
 .gantt-chart table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 800px; /* Ensure table has enough space */
+    min-width: 800px;
 }
 .gantt-chart th, .gantt-chart td {
-    border: 1px solid #e0e0e0;
-    padding: 8px;
+    border: 1px solid #EAE0D1;
+    padding: 10px 12px; /* Adjusted padding */
     text-align: left;
     font-size: 0.9em;
 }
 .gantt-chart th {
-    background-color: #667eea;
-    color: white;
+    background-color: #C8AD7F; /* Muted beige/brown from table header */
+    color: #4A3B31; /* Dark brown text */
     text-align: center;
+    font-weight: 600;
 }
 .gantt-task-name {
-    font-weight: bold;
+    font-weight: 500;
     min-width: 150px;
+    color: #4A3B31;
 }
 .gantt-bar-cell {
     position: relative;
-    height: 30px; /* Cell height for bar placement */
+    height: 32px; /* Slightly taller */
 }
 .gantt-bar {
     position: absolute;
-    height: 20px;
-    background-color: #28a745; /* Default bar color */
+    height: 22px; /* Slightly taller */
     border-radius: 5px;
-    margin-top: 5px; /* Center bar vertically */
+    margin-top: 5px;
     color: white;
     font-size: 0.8em;
-    padding: 0 5px;
-    line-height: 20px;
+    padding: 0 6px;
+    line-height: 22px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
-/* Gantt Bar Colors (Example) */
-.gantt-bar.planning { background-color: #28a745; }
-.gantt-bar.design { background-color: #ffc107; color: #333; }
-.gantt-bar.development { background-color: #dc3545; }
-.gantt-bar.testing { background-color: #6f42c1; }
+/* Gantt Bar Colors (Softer, harmonious palette) */
+.gantt-bar.planning { background-color: #A5D6A7; color: #2E7D32; } /* Soft Green */
+.gantt-bar.design { background-color: #FFD180; color: #795548; } /* Soft Gold/Yellow */
+.gantt-bar.development { background-color: #EF9A9A; color: #C62828; } /* Soft Red/Pink */
+.gantt-bar.testing { background-color: #90CAF9; color: #37474F; } /* Soft Blue */
 
 
 ul, ol {
-    margin-left: 20px;
-    margin-bottom: 10px;
+    margin-left: 25px; /* Consistent indent */
+    margin-bottom: 15px; /* More space after lists */
+    padding-left: 0; /* Let margin-left handle indent */
 }
 li {
-    margin-bottom: 5px;
+    margin-bottom: 8px; /* More space between items */
+    padding-left: 5px; /* Space for custom bullets if ever used */
 }
+
+/* Ensure links inherit body color by default and only change on purpose */
+a {
+    color: #A0522D; /* Default link color - Sienna/Terracotta */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+a:hover {
+    color: #795548; /* Darker brown on hover */
+    text-decoration: underline;
+}
+/* Override for nav links, as they have specific styling */
+.nav a, .nav a:hover {
+    text-decoration: none; /* Already handled by nav styles */
+}
+
 
 @media (max-width: 768px) {
     .pros-cons {
         grid-template-columns: 1fr;
     }
-    
+
     .container {
-        margin: 10px;
-        padding: 15px;
+        margin: 15px; /* Adjusted for smaller screens */
+        padding: 20px;
     }
-    
+
     .header h1 {
-        font-size: 2em;
+        font-size: 2.2em;
+    }
+    .header p {
+        font-size: 1.05em;
     }
 
     .nav a {
-        margin: 0 5px; /* Reduce margin for smaller screens */
-        padding: 6px 10px; /* Reduce padding */
+        margin: 0 4px;
+        padding: 8px 12px;
     }
     .lifecycle-diagram {
         flex-direction: column;
+        gap: 10px; /* Reduced gap for column layout */
     }
     .lifecycle-arrow {
         transform: rotate(90deg);
+        margin: 5px 0; /* Add margin for rotated arrows */
     }
+    .section h2 { font-size: 1.8em; }
+    .section h3 { font-size: 1.4em; }
+    .section h4 { font-size: 1.2em; }
 }
